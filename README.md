@@ -1,6 +1,6 @@
 # Script de Teste Conectividade Interno
 
-Esse script tem como função realizar teste conectividade de ping usando protocolo ICMP com coleta de dados estatísticos e backup de forma remota.
+Esse script tem como função realizar teste conectividade de ping usando protocolo ICMP com coleta de dados estatísticos e com LOG.
 
 ## Iniciando
 
@@ -12,14 +12,12 @@ Requisitos Necessários para execução do Script:
 ```
 Terminal – Console de Comando.
 Acesso SSH – Para acesso remoto na Plataforma Online 7/24.
-Acesso FTP – Para realizar downloads.
 Internet - Para Acesso Remoto.
 ```
 
 Sistema Operacional:
 ```
-ParrotOS - 64Bits
-Ubuntu 16x - 64Bits
+ParrotOS - 64Bits Debian-based
 ```
 
 ### Instalação
@@ -28,26 +26,20 @@ Não há necessidade de instalação por ser um script que roda localmente.
 
 ## Rodando Teste
 
-Todos os teste foram feito em Plataforma de Produção ate chegar ao resultado esperado.
+Todos os teste foram feito em Plataforma de Produção até chegar ao resultado esperado.
 
 ### Teste para certificação de código e suas funções
 
-Teste de ping nos host:
-```
-Realizar Ping - Teste Ok
-```
-Gerar Arquivos separado de Coletar das Métricas do ICMP:
-```
-Gerar logxxxx.txt - Teste Ok
-```
-Gerar uma pasta com nomenclatura conforme a data de execução:
-```
-Organização dos Arquivos de Log - Teste OK
-```
+Estável:
+**V1.0.0** -  Stable version
+
+Pré_Relese:
+**V1.0.1a** - Unstable version
+-Implementação de Organização e Backup
 
 ## Versão
 
-Versão: 1.0.1 - Produção
+Versão: 1.0.0 - Produção
 * Operando Diariamente
 * Nenhum BUG encontrado
 
