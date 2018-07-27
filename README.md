@@ -43,6 +43,9 @@ Versão: 1.0.0 - Produção
 * Operando Diariamente
 * Nenhum BUG encontrado
 
+Versão: 1.0.1a - FOR0001
+Unstable version
+
 ## Autores
 
 * **SuporteTI** - *Trabalho Inicial* - [Alan Spinola](https://www.alanspinola.store)
