@@ -2,15 +2,13 @@
 #!/bin/bash -x
 
 # Alan Spinola - suporte@alanspinola.store
-# Data: 27/07/2018
+# Data: 28/07/2018
 # Script para realização de backups.
-# Versão: 1.0.2a - Em Desenvolvimento
+# Versão: 1.0.3a - Em Desenvolvimento
 
 daystamp=`date +%d%m%y`
-anostamp= `date +%m%y`
 timestamp=`date +%H%M%S`
-pid=$$
-sessionId="${daystamp}${timestamp}-${pid}"
+sessionId="${daystamp} -- ${timestamp}"
 OS=`uname`
 
 #Script para realizar Backup
@@ -22,30 +20,23 @@ echo "Bem Vindo --WebMaster: $admin"
 echo *------------------------------------*
 data=$(date +"%c")
 echo "Data do backup: $data"
-
 #Diretorio Padrões
-dirsalve = 2018/$anostamp
 
 #Backup -FOR0001
 #Em Implementação
-if [ -d 2018/$anostamp]
+if [ -d "$daystamp"]
 then
-echo " Backups REF:$anostamp"
-mv *.txt $dirsalve
-cd 2018/
-tar -czvf $anostamp
-ls >> log_backup$anostamp.txt
-$sessionID >> log_backup$anostamp.txt
+echo " Backups REF:2018/"
+mv *.* "$daystamp.txt"
+tar -czvf "$daystamp"
+ls >> log_backup$daystamp.txt
 else
-mkdir 2018/$anostamp
-echo "Pasta criada REF:$anostamp"
-mv *.txt $dirsalve
-cd 2018/
-tar -czvf $anostamp
-ls >> log_backup$anostamp.txt
-$sessionID >> log_backup$anostamp.txt
+mkdir "$daystamp"
+echo "Pasta criada REF:$daystamp"
+mv  *.txt "$daystamp"
+tar -czvf "$daystamp"
+ls >> log_backup$daystamp.txt
 fi
-echo ""
 echo *------------------------------------*
 echo  Arquivos Compactados com Sucesso
 echo *------------------------------------*
