@@ -4,7 +4,7 @@
 # Alan Spinola - suporte@alanspinola.store
 # Data: 28/07/2018
 # Script para realização de backups.
-# Versão: 1.0.3a - Em Desenvolvimento
+# Versão: 1.0.4a - Em Desenvolvimento
 
 daystamp=`date +%d%m%y`
 timestamp=`date +%H%M%S`
@@ -27,14 +27,21 @@ echo "Data do backup: $data"
 if [ -d "$daystamp"]
 then
 echo " Backups REF:2018/"
-mv *.* "$daystamp.txt"
-tar -czvf "$daystamp"
+mv *.txt "$daystamp"
+
+# Compactação dos Arquvios
+#
+#tar -czf "$daystamp"
+
 ls >> log_backup$daystamp.txt
 else
 mkdir "$daystamp"
 echo "Pasta criada REF:$daystamp"
 mv  *.txt "$daystamp"
-tar -czvf "$daystamp"
+
+# Compactação dos Arquvios
+#
+#tar -czf "$daystamp"
 ls >> log_backup$daystamp.txt
 fi
 echo *------------------------------------*

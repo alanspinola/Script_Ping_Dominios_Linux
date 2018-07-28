@@ -4,7 +4,7 @@
 # Alan Spinola - suporte@alanspinola.store
 # Data: 28/07/2018
 # Script para Automação de teste IP via ICMP, com coleta de Log local.
-# Versão: 1.0.3a - Em Desenvolvimento
+# Versão: 1.0.4a - Em Desenvolvimento
 
 daystamp=`date +%d-%m-%y`
 timestamp=`date +%H:%M`
