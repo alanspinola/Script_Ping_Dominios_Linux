@@ -34,6 +34,18 @@ Estável:
 **V1.0.0** -  Stable version
 
 Pré_Relese:
+**V1.0.4a** - Stable version
+-Em Ambiente de Produção - Homologação
+
+**V1.0.3a** - Unstable version
+-Correção de Diretórios
+-Inclusão Backup.sh
+-Aumento de PING
+-Execução em ambiente de teste.
+
+**V1.0.2a** - Unstable version
+-Backup e novos Diretórios
+
 **V1.0.1a** - Unstable version
 -Implementação de Organização e Backup
 
@@ -42,6 +54,11 @@ Pré_Relese:
 Versão: 1.0.0 - Produção
 * Operando Diariamente
 * Nenhum BUG encontrado
+
+Versão: V1.0.4a - Em Homologação 30 dias
+* Em Ambiente de Produção - Homologação
+* Ping e coleta de LOG
+* Organização de Diretórios
 
 ## Autores
 
