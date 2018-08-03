@@ -23,11 +23,11 @@ echo "Data do Teste Realizado: $data"
 #Liste de Host que será realizado teste e coleta de informações.
 # Diretorio Padrão $HOME/public_html/iplist.txt
 # Diretorio para Ambiente de Testes == site/iplist.txt
-for i in $( cat site/iplist.txt )
+for i in $( cat $HOME/public_html/site/iplist.txt )
 do
 #Diretorio que será salvo arquivos de log.
-ping -c5 $i >> 2018/log$daystamp.txt
-echo $sessionId >> 2018/log$daystamp.txt
+ping -c5 $i >> $HOME/public_html/2018/log$daystamp.txt
+echo $sessionId >> $HOME/public_html/2018/log$daystamp.txt
 if [ $? -eq 0 ]
 	then
 echo ""

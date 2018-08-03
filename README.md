@@ -31,9 +31,11 @@ Todos os teste foram feito em Plataforma de Produção até chegar ao resultado 
 ### Teste para certificação de código e suas funções
 
 Estável:
+
 **V1.0.0** -  Stable version
 
 Pré_Relese:
+
 **V1.0.4a** - Stable version
 -Em Ambiente de Produção - Homologação
 
