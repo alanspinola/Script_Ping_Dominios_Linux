@@ -1,15 +1,13 @@
 #!/bin/bash
-#!/bin/bash -x
 
 # Alan Spinola - suporte@alanspinola.store
-# Data: 23/07/2018
+# Data: 28/07/2018
 # Script para Automação de teste IP via ICMP, com coleta de Log local.
-# Versão: 1.0.0 - Produção
+# Versão: 1.0.4a - Em Desenvolvimento
 
-daystamp=`date +%d%m%y`
-timestamp=`date +%H%M%S`
-pid=$$
-sessionId="${daystamp}${timestamp}-${pid}"
+daystamp=`date +%d-%m-%y`
+timestamp=`date +%H:%M`
+sessionId="${daystamp} -- ${timestamp}"
 OS=`uname`
 
 #Script para Teste das Hospedagens
@@ -22,10 +20,13 @@ echo *------------------------------------*
 data=$(date +"%c")
 echo "Data do Teste Realizado: $data"
 #Liste de Host que será realizado teste e coleta de informações.
-for i in $( cat $HOME/public_html/iplist.txt )
+# Diretorio Padrão $HOME/public_html/iplist.txt
+# Diretorio para Ambiente de Testes == site/iplist.txt
+for i in $( cat site/iplist.txt )
 do
 #Diretorio que será salvo arquivos de log.
-ping -c2 $i >> $HOME/public_html/log/log$daystamp.html
+ping -c5 $i >> 2018/log$daystamp.txt
+echo $sessionId >> 2018/log$daystamp.txt
 if [ $? -eq 0 ]
 	then
 echo ""
